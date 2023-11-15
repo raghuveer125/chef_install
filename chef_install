@@ -1,0 +1,10 @@
+Chef server install:
+
+https://packages.chef.io/files/stable/chef-workstation/23.7.1042/amazon/2/chef-workstation-23.7.1042-1.el7.x86_64.rpm
+sudo yum install libxcrypt-compat -y
+
+CronJob install
+sudo yum install cronie -y
+sudo systemctl enable crond.service
+sudo systemctl start crond.service
+sudo systemctl status crond | grep Active
